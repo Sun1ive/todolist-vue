@@ -1,0 +1,58 @@
+<template>
+  <button
+    v-on="$listeners"
+    :disabled="disabled"
+    :class="{
+      light,
+    }"
+    class="button"
+  >
+    <slot />
+  </button>
+</template>
+
+<script>
+export default {
+  name: 'Button',
+
+  props: {
+    light: {
+      type: Boolean,
+      default: false,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
+</script>
+
+<style scoped lang="scss">
+.button {
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  outline: none;
+  background-color: #1976d2;
+  color: #fff;
+
+  &:active {
+    top: 2px;
+    left: 1px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.light {
+  background: #fff;
+  color: #000;
+}
+</style>
