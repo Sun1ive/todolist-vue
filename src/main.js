@@ -10,8 +10,8 @@ Vue.config.productionTip = false;
 Vue.use(plugin);
 
 new Vue({
-  router,
-  store,
-  apolloProvider: createProvider(),
-  render: (h) => h(App),
+	router,
+	store,
+	apolloProvider: createProvider(),
+	render: (h) => h(App),
 }).$mount('#app');

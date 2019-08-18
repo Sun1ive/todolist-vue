@@ -1,48 +1,54 @@
 {
-  "name": "todolist-vue",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "storybook": "start-storybook"
-  },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-apollo": "^3.0.0-beta.11",
-    "vue-cli-plugin-apollo": "^0.21.0",
-    "vue-function-api": "^2.1.2",
-    "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@storybook/vue": "^5.1.11",
-    "@vue/cli-plugin-babel": "^3.10.0",
-    "@vue/cli-plugin-eslint": "^3.10.0",
-    "@vue/cli-service": "^3.10.0",
-    "@vue/eslint-config-airbnb": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.6",
-    "babel-preset-vue": "^2.0.2",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "graphql-tag": "^2.9.0",
-    "lint-staged": "^8.1.5",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "storybook-addon-vue-info": "^1.2.2",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+	"name": "todolist-vue",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
+	},
+	"dependencies": {
+		"core-js": "^2.6.0",
+		"vue": "^2.6.10",
+		"vue-apollo": "^3.0.0-beta.11",
+		"vue-cli-plugin-apollo": "^0.21.0",
+		"vue-function-api": "^2.1.2",
+		"vue-router": "^3.0.3",
+		"vuex": "^3.0.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@storybook/addon-actions": "^5.1.11",
+		"@storybook/addon-centered": "^5.1.11",
+		"@storybook/addon-knobs": "^5.1.11",
+		"@storybook/addon-links": "^5.1.11",
+		"@storybook/addon-notes": "^5.1.11",
+		"@storybook/addons": "^5.1.11",
+		"@storybook/vue": "^5.1.11",
+		"@vue/cli-plugin-babel": "^3.10.0",
+		"@vue/cli-plugin-eslint": "^3.10.0",
+		"@vue/cli-service": "^3.10.0",
+		"@vue/eslint-config-airbnb": "^4.0.0",
+		"babel-eslint": "^10.0.1",
+		"babel-loader": "^8.0.6",
+		"babel-preset-vue": "^2.0.2",
+		"eslint": "^5.16.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"graphql-tag": "^2.9.0",
+		"lint-staged": "^8.1.5",
+		"node-sass": "^4.9.0",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"gitHooks": {
+		"pre-commit": "lint-staged"
+	},
+	"lint-staged": {
+		"*.{js,vue}": [
+			"vue-cli-service lint",
+			"git add"
+		]
+	}
 }
